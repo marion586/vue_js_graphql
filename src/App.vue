@@ -1,10 +1,14 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
 import MyComponentVue from "./components/MyComponent.vue";
+import UltimateVueCompVue from "./Module/ultimate_vue_3_composition_api/UltimateVueComp.vue";
 </script>
 
 <template>
-  <MyComponentVue />
+  <div>
+    <!-- <MyComponentVue /> -->
+    <UltimateVueCompVue />
+  </div>
 </template>
 
 <style scoped>
