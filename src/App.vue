@@ -2,12 +2,14 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import MyComponentVue from "./components/MyComponent.vue";
 import UltimateVueCompVue from "./Module/ultimate_vue_3_composition_api/UltimateVueComp.vue";
+import StoreCompVue from "./Module/vuex/StoreComp.vue";
 </script>
 
 <template>
   <div>
     <!-- <MyComponentVue /> -->
     <UltimateVueCompVue />
+    <StoreCompVue />
   </div>
 </template>
 

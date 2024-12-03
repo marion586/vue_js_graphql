@@ -1,4 +1,6 @@
 import { createApp } from "vue";
+import { createStore } from "vuex";
+
 import {
   ApolloClient,
   createHttpLink,
@@ -12,6 +14,18 @@ const httpLink = createHttpLink({
   uri: "http://localhost:4000/graphql",
 });
 
+const store = createStore({
+  state() {
+    return {
+      count: 0,
+    };
+  },
+  mutations: {
+    increment(state) {
+      state.count++;
+    },
+  },
+});
 const cache = new InMemoryCache();
 
 const apolloClient = new ApolloClient({
@@ -25,4 +39,4 @@ const apolloProvider = createApolloProvider({
 import "./style.css";
 import App from "./App.vue";
 
-createApp(App).use(apolloProvider).mount("#app");
+createApp(App).use(apolloProvider).use(store).mount("#app");
